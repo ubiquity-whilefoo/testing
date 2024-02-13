@@ -1,0 +1,7 @@
+handlers:
+  events:
+    issue_comment.created:
+      - workflow:
+          owner: ubiquity-whilefoo
+          repository: comment-incentives
+          workflowId: compute.yml
