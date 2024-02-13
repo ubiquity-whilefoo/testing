@@ -1,4 +1,5 @@
 handlers:
+  commands:
   events:
     issue_comment.created:
       - workflow:
