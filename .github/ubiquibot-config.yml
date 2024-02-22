@@ -1,7 +1,7 @@
 handlers:
   commands: {}
   events:
-    issue_comment.created:
+    issues.closed:
       - workflow:
           owner: ubiquity-whilefoo
           repository: comment-incentives-2
