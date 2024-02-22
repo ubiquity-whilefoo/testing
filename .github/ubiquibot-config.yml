@@ -4,5 +4,6 @@ handlers:
     issue_comment.created:
       - workflow:
           owner: ubiquity-whilefoo
-          repository: comment-incentives
+          repository: comment-incentives-2
           workflowId: compute.yml
+          ref: interface-with-kernel
