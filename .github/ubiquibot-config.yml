@@ -16,4 +16,4 @@ plugins:
             test-input: plugin-A
         - plugin: ubiquibot-whilefoo-testing/plugin-B
           with:
-            test-input: {{ plugin-A.output.test_output }}
+            test-input: ${{ plugin-A.output.test_output }}
