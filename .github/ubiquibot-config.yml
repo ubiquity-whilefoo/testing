@@ -3,6 +3,7 @@ plugins:
   issues.closed:
     - uses:
         - plugin: ubiquity-whilefoo/comment-incentives-2:compute.yml@interface-with-kernel
+          type: github
           with:
             evmNetworkId: 100
             isNftRewardEnabled: true
@@ -11,9 +12,11 @@ plugins:
     - name: "Run on commment created"
       uses:
         - id: plugin-A
+          type: github
           plugin: ubiquibot-whilefoo-testing/plugin-A
           with:
             test-input: plugin-A
         - plugin: ubiquibot-whilefoo-testing/plugin-B
+          type: github
           with:
             test-input: ${{ plugin-A.output.test_output }}
