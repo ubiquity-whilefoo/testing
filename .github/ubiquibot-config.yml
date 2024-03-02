@@ -20,3 +20,4 @@ plugins:
           type: github
           with:
             test-input: ${{ plugin-A.output.test_output }}
+
