@@ -1,3 +1,17 @@
+globals:
+  labels: &labels
+    time:
+      - "Time: <1 Hour"
+      - "Time: <2 Hours"
+      - "Time: <4 Hours"
+      - "Time: <1 Day"
+      - "Time: <1 Week"
+    priority:
+      - "Priority: 1 (Normal)"
+      - "Priority: 2 (Medium)"
+      - "Priority: 3 (High)"
+      - "Priority: 4 (Urgent)"
+      - "Priority: 5 (Emergency)"
 
 plugins:
   issues.closed:
@@ -20,4 +34,27 @@ plugins:
           type: github
           with:
             test-input: ${{ plugin-A.output.test_output }}
+
+  
+  issues.labeled:
+    - name: "Assistive Pricing"
+      uses:
+        - type: github
+          plugin: ubiquibot/assistive-pricing@assistive-pricing
+          with:
+            labels: *labels
+  issues.unlabeled:
+    - name: "Assistive Pricing"
+      uses:
+        - type: github
+          plugin: ubiquibot/assistive-pricing@assistive-pricing
+          with:
+            labels: *labels
+  label.edited:
+    - name: "Assistive Pricing"
+      uses:
+        - type: github
+          plugin: ubiquibot/assistive-pricing@assistive-pricing
+          with:
+            labels: *labels
 
