@@ -40,21 +40,21 @@ plugins:
     - name: "Assistive Pricing"
       uses:
         - type: github
-          plugin: ubiquibot/assistive-pricing@assistive-pricing
+          plugin: ubiquibot-whilefoo-testing/assistive-pricing@assistive-pricing
           with:
             labels: *labels
   issues.unlabeled:
     - name: "Assistive Pricing"
       uses:
         - type: github
-          plugin: ubiquibot/assistive-pricing@assistive-pricing
+          plugin: ubiquibot-whilefoo-testing/assistive-pricing@assistive-pricing
           with:
             labels: *labels
   label.edited:
     - name: "Assistive Pricing"
       uses:
         - type: github
-          plugin: ubiquibot/assistive-pricing@assistive-pricing
+          plugin: ubiquibot-whilefoo-testing/assistive-pricing@assistive-pricing
           with:
             labels: *labels
 
