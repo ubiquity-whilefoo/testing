@@ -36,6 +36,7 @@ plugins:
             test-input: ${{ plugin-A.output.test_output }}
 
     - name: "Assistive Pricing"
+      command: "/labels"
       uses:
         - type: github
           plugin: ubiquibot-whilefoo-testing/assistive-pricing@assistive-pricing
