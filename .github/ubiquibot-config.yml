@@ -35,6 +35,13 @@ plugins:
           with:
             test-input: ${{ plugin-A.output.test_output }}
 
+    - name: "Assistive Pricing"
+      uses:
+        - type: github
+          plugin: ubiquibot-whilefoo-testing/assistive-pricing@assistive-pricing
+          with:
+            labels: *labels
+
   
   issues.labeled:
     - name: "Assistive Pricing"
