@@ -34,6 +34,13 @@ plugins:
           type: github
           with:
             test-input: ${{ plugin-A.output.test_output }}
+            test: "A"
+            nested-input:
+              test-input-2: ${{ plugin-A.output.test_output }}
+              test: "B"
+              nested-input-2:
+                test-input-3: ${{ plugin-A.output.test_output }}
+                test: "C"
 
     - name: "Assistive Pricing"
       command: "/labels"
@@ -43,7 +50,6 @@ plugins:
           with:
             labels: *labels
 
-  
   issues.labeled:
     - name: "Assistive Pricing"
       uses:
