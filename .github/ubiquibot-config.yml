@@ -27,20 +27,7 @@ plugins:
       uses:
         - id: plugin-A
           type: github
-          plugin: ubiquibot-whilefoo-testing/plugin-A
-          with:
-            test-input: plugin-A
-        - plugin: ubiquibot-whilefoo-testing/plugin-B
-          type: github
-          with:
-            test-input: ${{ plugin-A.output.test_output }}
-            test: "A"
-            nested-input:
-              test-input-2: ${{ plugin-A.output.test_output }}
-              test: "B"
-              nested-input-2:
-                test-input-3: ${{ plugin-A.output.test_output }}
-                test: "C"
+          plugin: https://ubiquibot-command-query-user.vipline-dev.workers.dev
 
     - name: "Assistive Pricing"
       command: "/labels"
