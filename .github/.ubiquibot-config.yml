@@ -28,6 +28,8 @@ plugins:
         - id: plugin-A
           type: github
           plugin: https://ubiquibot-command-query-user.vipline-dev.workers.dev
+          with:
+            test: true
 
     - name: "Assistive Pricing"
       command: "/labels"
