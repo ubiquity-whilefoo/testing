@@ -26,7 +26,6 @@ plugins:
     - name: "Run on commment created"
       uses:
         - id: plugin-A
-          type: github
           plugin: https://ubiquibot-command-query-user.vipline-dev.workers.dev
 
     - name: "Assistive Pricing"
